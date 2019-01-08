@@ -62,4 +62,10 @@ describe('i18nZipcodes: ', function() {
 
 		expect(isDuplicateCountriesId).to.equal(false);
 	});
+
+	it('should validate KR properly', () => {
+		expect(i18nZipcodes('KR', '123-456')).to.equal(true);
+		expect(i18nZipcodes('KR', '12345')).to.equal(true);
+	});
+
 });
